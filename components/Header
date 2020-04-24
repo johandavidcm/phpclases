@@ -16,11 +16,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
-                    Formularios
+                    1. Formulario
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="FormularioBootstrap.php">Con Bootstrap</a>
-                    <a class="dropdown-item" href="Formularios.php">Sin Bootstrap</a>
+                    <a class="dropdown-item" href="FormularioBootstrap.php">Validación con Bootstrap</a>
+                    <a class="dropdown-item" href="Formularios.php">Validación sin Bootstrap</a>
                 </div>
             </li>
         </ul>
