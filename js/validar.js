@@ -9,7 +9,7 @@ $(document).ready(function(){
             data: data,
             success: function(resp){
                 document.getElementById('respuesta').innerHTML = "";
-                if(resp == null){
+                if(resp == ""){
                     $(data).each(function(i){
                         document.cookie= data[i].name+"="+data[i].value;
                     });
@@ -18,7 +18,7 @@ $(document).ready(function(){
                 else{
                     var arrayCadena = resp.split(',');
                     for (var i = 0; i < arrayCadena.length; i++) {
-                        document.getElementById('respuesta').innerHTML += arrayCadena[i] +"<br>";
+                        document.getElementById('respuesta').innerHTML += "* " + arrayCadena[i] +"<br>";
                     }
                     document.getElementById('txtnombres').focus();
                 }
