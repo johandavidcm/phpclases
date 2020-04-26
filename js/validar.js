@@ -8,13 +8,19 @@ $(document).ready(function(){
             url: "Back/validar.php",
             data: data,
             success: function(resp){
-                $('#respuesta').html(resp);
-                console.log(data[0].value);
-                if(resp == ""){
+                document.getElementById('respuesta').innerHTML = "";
+                if(resp == null){
                     $(data).each(function(i){
                         document.cookie= data[i].name+"="+data[i].value;
                     });
                     location.href = 'ReciboDeDatos.php';
+                }
+                else{
+                    var arrayCadena = resp.split(',');
+                    for (var i = 0; i < arrayCadena.length; i++) {
+                        document.getElementById('respuesta').innerHTML += arrayCadena[i] +"<br>";
+                    }
+                    document.getElementById('txtnombres').focus();
                 }
             }
         });
